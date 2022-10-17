@@ -1,0 +1,45 @@
+Apple
+AAPL
+121.73
+Advanced Micro Devices
+AMD
+84.51
+Ford Motor
+F
+11.7
+General Electric
+GE
+12.54
+Intel
+INTC
+60.78
+MINE
+MI
+222
+Motorola Inc.
+MOT
+17.49
+Tesla
+TSLA
+564.33
+AT&T Inc.
+T
+23.87
+Verizon Communications Inc.
+VZ
+51.17
+Alphabet Inc Class A
+GOOGL
+2829.11
+Meta Platforms Inc
+FB
+223.59
+Microsoft Corporation
+MSFT
+310.70
+Atlassian Corporation PLC
+TEAM
+302.31
+Twitter Inc
+TWTR
+39.12
