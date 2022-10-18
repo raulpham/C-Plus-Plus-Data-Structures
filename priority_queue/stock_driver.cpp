@@ -1,28 +1,9 @@
-//*****************************************************************************************************
-//
-//  This program defines Stock ADT.
-//
-//
-//  Other files required:
-//   1. PriorityQueueDriver.h
-//   2. Stock.h
-//   3. PriorityQueue.h
-//   5. Stock.txt
-//
-//*****************************************************************************************************
-
 #include "Stock.h"
-
-//*****************************************************************************************************
 
 #include <iostream>
 #include <string>
 
-//*****************************************************************************************************
-
 using namespace std;
-
-//*****************************************************************************************************
 
 Stock :: Stock (const string & name, const string & symbol, double price)
 {
@@ -31,16 +12,12 @@ Stock :: Stock (const string & name, const string & symbol, double price)
   this -> price = price;
 }
 
-//*****************************************************************************************************
-
 Stock :: Stock (const Stock &s)
 {
   this -> companyName = s.companyName;
   this -> stockSymbol = s.stockSymbol;
   this -> price = s.price;
 }
-
-//*****************************************************************************************************
 
 int Stock :: hash (int size) const
 {
@@ -54,9 +31,6 @@ int Stock :: hash (int size) const
   return val % size;
 }
 
-
-//*****************************************************************************************************
-
 ostream & operator << (ostream & o, const Stock & r)
 {
   o << r.companyName << endl;
@@ -65,8 +39,6 @@ ostream & operator << (ostream & o, const Stock & r)
   
   return o;
 }
-
-//*****************************************************************************************************
 
 istream & operator >> (istream & i, Stock & r)
 {
@@ -83,5 +55,3 @@ istream & operator >> (istream & i, Stock & r)
   
   return i;
 }
-
-//*****************************************************************************************************
