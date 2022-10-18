@@ -1,25 +1,8 @@
-//*****************************************************************************************************
-//
-//  This program defines PriorityQueue ADT.
-//
-//
-//  Other files required:
-//   1. PriorityQueueDriver.h
-//   2. Stock.h
-//   3. StockDriver.cpp
-//   5. Stock.txt
-//
-//*****************************************************************************************************
-
 #ifndef PRIORITYQUEUE_H
 #define PRIORITYQUEUE_H
 
-//*****************************************************************************************************
-
 #include <iostream>
 #include <new>
-
-//*****************************************************************************************************
 
 template <typename T>
 class PriorityQueue
@@ -39,8 +22,6 @@ public:
   void display () const;
 };
 
-//*****************************************************************************************************
-
 template <typename T>
 PriorityQueue <T> :: PriorityQueue ()
 {
@@ -48,8 +29,6 @@ PriorityQueue <T> :: PriorityQueue ()
   capacity = 12;
   elements = new T [capacity];
 }
-
-//*****************************************************************************************************
 
 template <typename T>
 PriorityQueue <T> :: ~PriorityQueue ()
@@ -59,8 +38,6 @@ PriorityQueue <T> :: ~PriorityQueue ()
   delete [] elements;
   elements = nullptr;
 }
-
-//*****************************************************************************************************
 
 template <typename T>
 bool PriorityQueue <T> :: _resize ()
@@ -85,8 +62,6 @@ bool PriorityQueue <T> :: _resize ()
   }
   return success;
 }
-
-//*****************************************************************************************************
 
 template <typename T>
 void PriorityQueue <T> :: heapify (int i)
@@ -130,8 +105,6 @@ void PriorityQueue <T> :: heapify (int i)
   elements [i] = temp;
 }
 
-//*****************************************************************************************************
-
 template <typename T>
 void PriorityQueue <T> :: enqueue (const T& value)
 {
@@ -157,8 +130,6 @@ void PriorityQueue <T> :: enqueue (const T& value)
   }
 }
 
-//*****************************************************************************************************
-
 template <typename T>
 bool PriorityQueue <T> :: dequeue (T& value)
 {
@@ -175,8 +146,6 @@ bool PriorityQueue <T> :: dequeue (T& value)
   return removed;
 }
 
-//*****************************************************************************************************
-
 template <typename T>
 void PriorityQueue <T> :: display () const
 {
@@ -186,7 +155,5 @@ void PriorityQueue <T> :: display () const
   }
   std::cout << std::endl;
 }
-
-//*****************************************************************************************************
 
 #endif
