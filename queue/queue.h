@@ -1,27 +1,11 @@
-//*****************************************************************************************************
-//
-//        This program builds a queue.
-//
-//        Other files required:
-//                 1. Node.h
-//                 2. QueueDriver.cpp
-//
-//*****************************************************************************************************
-
 #ifndef Queue_h
 #define Queue_h
 #include <iostream>
 #include <new>
 
-//*****************************************************************************************************
-
 using namespace std;
 
-//*****************************************************************************************************
-
 #include "node.h"
-
-//*****************************************************************************************************
 
 template <typename T>
 class Queue
@@ -42,16 +26,12 @@ public:
   bool isEmpty () const;
 };
 
-//*****************************************************************************************************
-
 template <typename T>
 Queue <T> :: Queue ()
 {
   front = back = nullptr;
   numValues = 0;
 }
-
-//*****************************************************************************************************
 
 template <typename T>
 Queue <T> :: ~Queue ()
@@ -65,8 +45,6 @@ Queue <T> :: ~Queue ()
     delete pTemp;
   }
 }
-
-//*****************************************************************************************************
 
 template <typename T>
 bool Queue <T> :: enqueue (const T & dataIn)
@@ -92,8 +70,6 @@ bool Queue <T> :: enqueue (const T & dataIn)
   return success;
 }
 
-//*****************************************************************************************************
-
 template <typename T>
 bool Queue <T> :: dequeue (T & dataOut)
 {
@@ -116,8 +92,6 @@ bool Queue <T> :: dequeue (T & dataOut)
   return success;
 }
 
-//*****************************************************************************************************
-
 template <typename T>
 bool Queue <T> :: viewFront (T & dataOut) const
 {
@@ -131,8 +105,6 @@ bool Queue <T> :: viewFront (T & dataOut) const
   }
   return success;
 }
-
-//*****************************************************************************************************
 
 template <typename T>
 bool Queue <T> :: viewBack (T & dataOut) const
@@ -148,8 +120,6 @@ bool Queue <T> :: viewBack (T & dataOut) const
   return success;
 }
 
-//*****************************************************************************************************
-
 template <typename T>
 int Queue <T> :: getNumValues () const
 {
@@ -163,8 +133,6 @@ int Queue <T> :: getNumValues () const
   }
   return size;
 }
-
-//*****************************************************************************************************
 
 template <typename T>
 bool Queue <T> :: isFull () const
@@ -181,8 +149,6 @@ bool Queue <T> :: isFull () const
   return success;
 }
 
-//*****************************************************************************************************
-
 template <typename T>
 bool Queue <T> :: isEmpty () const
 {
@@ -195,7 +161,5 @@ bool Queue <T> :: isEmpty () const
   
   return success;
 }
-
-//*****************************************************************************************************
 
 #endif
